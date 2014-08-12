@@ -11,10 +11,11 @@ The most stupid way to run a git command on multiple repositories.
 ## Setup
 
  1. ```cd <main repository>```
- 2. create .gitmulti and the paths to any dependency repository (1 per line)
+ 2. create ```.gitmulti``` file
+ 3. add to ```.gitmulti``` the path to any repository you want to manage with git-multi (1 per line)
 
 
-#### Example
+## Example
 
 If you have the following repositories:
 ```
