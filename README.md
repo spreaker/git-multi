@@ -25,10 +25,9 @@ If you have the following repositories:
 ```
 
 You can configure git-multi on your ```main-app```:
-*/workspace/main-app/.gitmulti*
 ```
-../lib-1
-../lib-2
+echo "../lib-1" >> /workspace/main-app/.gitmulti
+echo "../lib-2" >> /workspace/main-app/.gitmulti
 ```
 
 And then run a git command to your repositories:
