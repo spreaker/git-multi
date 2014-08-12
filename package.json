@@ -1,0 +1,18 @@
+{
+    "name": "git-multi",
+    "version": "0.1",
+    "description": "The most stupid way to run a git command on multiple repositories.",
+    "main": "bin/git-multi",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/spreaker/git-multi.git"
+    },
+    "keywords": [ "git" ],
+    "author": "Marco Pracucci <marco.pracucci@spreaker.com>",
+    "contributors": [ "Rocco Zanni <rocco.zanni@spreaker.com>" ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/spreaker/git-multi/issues"
+    },
+    "homepage": "https://github.com/spreaker/git-multi"
+}
