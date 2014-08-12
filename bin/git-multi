@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Get current directory
+CURR_DIR=`pwd`
+CURR_ARGS=$@
+
+# Check if .gitmulti exists
+if [ ! -f "${CURR_DIR}/.gitmulti" ]; then
+    echo "Unable to find ${CURR_DIR}/.gitmulti"
+    exit 1
+fi
+
+
+run_git()
+{
+    NAME=`basename $1`
+    cd $1
+    echo -e "--- $NAME ---\n"
+    git $CURR_ARGS
+    echo ""
+    cd $CURR_DIR
+}
+
+# Execute git command on each dependency
+for DIR in `cat ${CURR_DIR}/.gitmulti`; do
+    run_git $DIR
+done
+
+# Execute git command on main project
+run_git $CURR_DIR
