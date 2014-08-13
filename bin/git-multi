@@ -2,7 +2,6 @@
 
 # Get current directory
 CURR_DIR=`pwd`
-CURR_ARGS=$@
 
 # Check if .gitmulti exists
 if [ ! -f "${CURR_DIR}/.gitmulti" ]; then
@@ -10,21 +9,10 @@ if [ ! -f "${CURR_DIR}/.gitmulti" ]; then
     exit 1
 fi
 
-
-run_git()
-{
-    NAME=`basename $1`
-    cd $1
-    echo -e "--- $NAME ---\n"
-    git $CURR_ARGS
+# Execute git command on current dir and each dependency
+for DIR in "$CURR_DIR" `cat ${CURR_DIR}/.gitmulti`; do
+    NAME=`basename $DIR`
+    echo -e "\033[1m${NAME}\033[0m\n"
+    cd $DIR; git "$@"; cd $CURR_DIR
     echo ""
-    cd $CURR_DIR
-}
-
-# Execute git command on each dependency
-for DIR in `cat ${CURR_DIR}/.gitmulti`; do
-    run_git $DIR
 done
-
-# Execute git command on main project
-run_git $CURR_DIR
