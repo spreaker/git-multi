@@ -8,8 +8,8 @@
         "url": "git://github.com/spreaker/git-multi.git"
     },
     "keywords": [ "git" ],
-    "author": "Marco Pracucci <marco.pracucci@spreaker.com>",
-    "contributors": [ "Rocco Zanni <rocco.zanni@spreaker.com>" ],
+    "author": "Spreaker Team <dev@spreaker.com>",
+    "contributors": [ "Marco Pracucci <marco.pracucci@spreaker.com>", "Rocco Zanni <rocco.zanni@spreaker.com>" ],
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/spreaker/git-multi/issues"
