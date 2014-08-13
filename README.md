@@ -22,7 +22,7 @@ npm -g install git-multi
  2. create `.gitmulti` file
  3. add to `.gitmulti` the path to any repository you want to manage with git-multi (1 per line)
 
-Then, in the `<main repository>` you can any git command like this:
+Then, in the `<main repository>` you can run any git command like this:
 ``` bash
 git multi status
 ```
@@ -45,8 +45,8 @@ echo "../lib-1" >> /workspace/main-app/.gitmulti
 echo "../lib-2" >> /workspace/main-app/.gitmulti
 ```
 
-And then run a git command to your repositories:
-```
+And then run:
+``` bash
 cd /workspace/main-app
 git multi status
 ```
