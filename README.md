@@ -50,3 +50,16 @@ And then run:
 cd /workspace/main-app
 git multi status
 ```
+
+
+## Syntax
+
+Run any git command on multiple repositories:
+``` bash
+git multi <any git command>
+```
+
+List repositories managed by `git-multi`:
+``` bash
+git multi list
+```
