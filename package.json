@@ -2,7 +2,6 @@
     "name": "git-multi",
     "version": "0.1",
     "description": "The most stupid way to run a git command on multiple repositories.",
-    "main": "bin/git-multi",
     "repository": {
         "type": "git",
         "url": "git://github.com/spreaker/git-multi.git"
@@ -14,5 +13,8 @@
     "bugs": {
         "url": "https://github.com/spreaker/git-multi/issues"
     },
-    "homepage": "https://github.com/spreaker/git-multi"
+    "homepage": "https://github.com/spreaker/git-multi",
+    "bin": {
+        "git-multi": "./bin/git-multi"
+    }
 }
