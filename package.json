@@ -1,6 +1,6 @@
 {
     "name": "git-multi",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "description": "The most stupid way to run a git command on multiple repositories.",
     "repository": {
         "type": "git",

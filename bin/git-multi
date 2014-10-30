@@ -12,13 +12,14 @@ fi
 # Execute git command on current dir and each dependency
 for DIR in "$CURR_DIR" `cat ${CURR_DIR}/.gitmulti`; do
     NAME=`basename $DIR`
+    BRANCH=`git branch | sed -n '/\* /s///p'`
 
-    if [ "$1" == "list" ]; then
-        # git multi list
-        echo $NAME
-    else
-        # GIT command
-        echo -e "\033[1m${NAME}\033[0m\n"
+    # Print repo name + branch
+    echo -e "\033[1;33m${NAME}\033[0m (${BRANCH})"
+
+    # Run git command
+    if [ "$1" != "list" ]; then
+        echo ""
         cd $DIR; git "$@"; cd $CURR_DIR
         echo ""
     fi
