@@ -11,6 +11,8 @@ fi
 
 # Execute git command on current dir and each dependency
 for DIR in "$CURR_DIR" `cat ${CURR_DIR}/.gitmulti`; do
+    cd $DIR;
+
     NAME=`basename $DIR`
     BRANCH=`git branch | sed -n '/\* /s///p'`
 
@@ -20,7 +22,9 @@ for DIR in "$CURR_DIR" `cat ${CURR_DIR}/.gitmulti`; do
     # Run git command
     if [ "$1" != "list" ]; then
         echo ""
-        cd $DIR; git "$@"; cd $CURR_DIR
+        git "$@"
         echo ""
     fi
+
+    cd $CURR_DIR
 done
